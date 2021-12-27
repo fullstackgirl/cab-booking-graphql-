@@ -1,0 +1,20 @@
+{
+    "_id": "61b881ea83c9bb0c09ac44f4",
+    "customer": {
+        "name": "Asiyath",
+        "email": "Asiyath@gmail.com",
+        "phone_number": 1234567890,
+        "cus_capacity": 4
+    },
+    "vehicle": {
+        "_id": "61b7514c464ee8f7bcf7c159",
+        "name": "muruti",
+        "capacity": 6,
+        "date_of_manufacture": "2015-08-22T00:00:00.000Z",
+        "model": "dksjfk",
+        "vin": "12345678901234569"
+    },
+    "booking_date": "2021-11-25T04:30:00.000Z",
+    "is_active": true,
+    "__v": 0
+}

@@ -1,0 +1,7 @@
+{
+    "env": {
+        "MONGO_USER": "asiyath",
+        "MONGO_PASSWORD": "",
+        "MONGO_DB_NAME": "CabBookingSystem"
+    }
+}

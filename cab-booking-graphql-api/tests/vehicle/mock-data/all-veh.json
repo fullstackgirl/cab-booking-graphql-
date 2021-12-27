@@ -1,0 +1,23 @@
+[{
+        "vehicle": {
+            "name": "bmw",
+            "capacity": 2,
+            "date_of_manufacture": "2015-08-22T00:00:00.000Z",
+            "model": "smx",
+            "vin": "12345678901234564"
+        },
+        "_id": "61b1f44a668fdf806b23d677",
+        "__v": 0
+    },
+    {
+        "vehicle": {
+            "name": "bmw",
+            "capacity": 2,
+            "date_of_manufacture": "2015-08-22T00:00:00.000Z",
+            "model": "smx",
+            "vin": "12345678901234565"
+        },
+        "_id": "61b202de79c2a8e3cd4e554b",
+        "__v": 0
+    }
+]

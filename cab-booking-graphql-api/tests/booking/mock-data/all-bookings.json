@@ -1,0 +1,41 @@
+[{
+        "_id": "61b32d0e19e4336be66203d0",
+        "customer": {
+            "name": "Asiyath Rajila",
+            "email": "asiyath@gmail.com",
+            "phone_number": 1234567890,
+            "cus_capacity": 2
+        },
+        "vehicle": {
+            "_id": "61b1f44a668fdf806b23d677",
+            "name": "bmw",
+            "capacity": 2,
+            "date_of_manufacture": "2015-08-22T00:00:00.000Z",
+            "model": "smx",
+            "vin": "12345678901234564"
+        },
+        "booking_date": "2021-12-10T10:33:50.763Z",
+        "is_active": false,
+        "__v": 0
+    },
+    {
+        "_id": "61b32d1619e4336be66203d3",
+        "customer": {
+            "name": "Asiyath Rajila",
+            "email": "asiyath@gmail.com",
+            "phone_number": 1234567890,
+            "cus_capacity": 2
+        },
+        "vehicle": {
+            "_id": "61b1f44a668fdf806b23d677",
+            "name": "bmw",
+            "capacity": 2,
+            "date_of_manufacture": "2015-08-22T00:00:00.000Z",
+            "model": "smx",
+            "vin": "12345678901234564"
+        },
+        "booking_date": "2021-12-10T10:33:58.488Z",
+        "is_active": false,
+        "__v": 0
+    }
+]

@@ -1,0 +1,9 @@
+{
+    "vehicleInput": {
+        "name": "muruti",
+        "capacity": 6,
+        "date_of_manufacture": "2015-08-22T00:00:00.000Z",
+        "model": "dksjfk",
+        "vin": "1234567890"
+    }
+}

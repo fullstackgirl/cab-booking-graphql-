@@ -1,0 +1,433 @@
+{
+	"info": {
+		"_postman_id": "81c5082f-68de-4a1e-aaec-96b7d600ead0",
+		"name": "cab-booking-graphql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "vehicle",
+			"item": [
+				{
+					"name": "createVehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n  createVehicle( vehicleInput:{\r\n    name: \"Maruti\",\r\n    capacity: 4,\r\n    date_of_manufacture: \"2015-08-22T00:00:00.000Z\",\r\n    model: \"Suzuki\",\r\n    vin: \"12345678901234561\"\r\n  })\r\n  {\r\n    _id\r\n\tname\r\n    capacity\r\n    date_of_manufacture\r\n    model\r\n    vin\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": "http://localhost:8005/graphql"
+					},
+					"response": [
+						{
+							"name": "createVehicle eg",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation{\r\n  createVehicle( vehicleInput:{\r\n    name: \"Maruti\",\r\n    capacity: 4,\r\n    date_of_manufacture: \"2015-08-22T00:00:00.000Z\",\r\n    model: \"Suzuki\",\r\n    vin: \"12345678901234561\"\r\n  })\r\n  {\r\n    _id\r\n\tname\r\n    capacity\r\n    date_of_manufacture\r\n    model\r\n    vin\r\n  }\r\n}",
+										"variables": ""
+									}
+								},
+								"url": "http://localhost:8005/graphql"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b6-hpIGv8fO7q+bxm9eIx67rdD3jRY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 Dec 2021 14:28:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"createVehicle\": {\n            \"_id\": \"61c33629a080972d372a5908\",\n            \"name\": \"Maruti\",\n            \"capacity\": 4,\n            \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n            \"model\": \"Suzuki\",\n            \"vin\": \"12345678901234561\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "vehicles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n    vehicles {\r\n        _id\r\n        capacity\r\n        date_of_manufacture\r\n        model\r\n        name\r\n        vin  \r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": "http://localhost:8005/graphql"
+					},
+					"response": [
+						{
+							"name": "vehicles eg",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query{\r\n    vehicles {\r\n        _id\r\n        capacity\r\n        date_of_manufacture\r\n        model\r\n        name\r\n        vin  \r\n    }\r\n}",
+										"variables": ""
+									}
+								},
+								"url": "http://localhost:8005/graphql"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "929"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3a1-NC6GGwrumGUjM3B9GEo42ruVobA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 Dec 2021 14:11:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"vehicles\": [\n            {\n                \"_id\": \"61b1f44a668fdf806b23d677\",\n                \"capacity\": 2,\n                \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                \"model\": \"smx\",\n                \"name\": \"bmw\",\n                \"vin\": \"12345678901234564\"\n            },\n            {\n                \"_id\": \"61b202de79c2a8e3cd4e554b\",\n                \"capacity\": 2,\n                \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                \"model\": \"smx\",\n                \"name\": \"bmw\",\n                \"vin\": \"12345678901234565\"\n            },\n            {\n                \"_id\": \"61b22383065d0c94b55312e7\",\n                \"capacity\": 2,\n                \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                \"model\": \"smx\",\n                \"name\": \"bmw\",\n                \"vin\": \"12345678901234566\"\n            },\n            {\n                \"_id\": \"61b2fe79260acde60c74e3a4\",\n                \"capacity\": 2,\n                \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                \"model\": \"smx\",\n                \"name\": \"bmw\",\n                \"vin\": \"12345678901234563\"\n            },\n            {\n                \"_id\": \"61b2fefd6d6fc4c14380d9a6\",\n                \"capacity\": 2,\n                \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                \"model\": \"smx\",\n                \"name\": \"bmw\",\n                \"vin\": \"12345678901234562\"\n            },\n            {\n                \"_id\": \"61b7514c464ee8f7bcf7c159\",\n                \"capacity\": 6,\n                \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                \"model\": \"dksjfk\",\n                \"name\": \"muruti\",\n                \"vin\": \"12345678901234569\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "booking",
+			"item": [
+				{
+					"name": "createBooking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n  createBooking(\r\n    bookingInput: \r\n    {\r\n      customer:\r\n      {\r\n        name: \"Asiyath Rajila\",\r\n        email: \"asiyath@gmail.com\",\r\n        phone_number: 1234567890,\r\n        cus_capacity: 5\r\n      },\r\n      vin: \"12345678901234569\"\r\n    }\r\n  ){\r\n    _id\r\n    customer {\r\n      name\r\n      email\r\n      phone_number\r\n      cus_capacity\r\n    }\r\n    vehicle {\r\n      _id\r\n      name\r\n      capacity\r\n      date_of_manufacture\r\n      model\r\n      vin\r\n    }\r\n    booking_date\r\n    is_active\r\n    \r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": "http://localhost:8005/graphql"
+					},
+					"response": [
+						{
+							"name": "createBooking eg",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation{\r\n  createBooking(\r\n    bookingInput: \r\n    {\r\n      customer:\r\n      {\r\n        name: \"Asiyath Rajila\",\r\n        email: \"asiyath@gmail.com\",\r\n        phone_number: 1234567890,\r\n        cus_capacity: 5\r\n      },\r\n      vin: \"12345678901234569\"\r\n    }\r\n  ){\r\n    _id\r\n    customer {\r\n      name\r\n      email\r\n      phone_number\r\n      cus_capacity\r\n    }\r\n    vehicle {\r\n      _id\r\n      name\r\n      capacity\r\n      date_of_manufacture\r\n      model\r\n      vin\r\n    }\r\n    booking_date\r\n    is_active\r\n    \r\n  }\r\n}",
+										"variables": ""
+									}
+								},
+								"url": "http://localhost:8005/graphql"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "389"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"185-HrSaAnRlZMcHr//R1OOWpArg5GU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 Dec 2021 14:24:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"createBooking\": {\n            \"_id\": \"61c3350fa080972d372a5902\",\n            \"customer\": {\n                \"name\": \"Asiyath Rajila\",\n                \"email\": \"asiyath@gmail.com\",\n                \"phone_number\": 1234567890,\n                \"cus_capacity\": 5\n            },\n            \"vehicle\": {\n                \"_id\": \"61b7514c464ee8f7bcf7c159\",\n                \"name\": \"muruti\",\n                \"capacity\": 6,\n                \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                \"model\": \"dksjfk\",\n                \"vin\": \"12345678901234569\"\n            },\n            \"booking_date\": \"2021-12-22T14:24:15.438Z\",\n            \"is_active\": true\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "bookings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n  bookings{\r\n    _id\r\n    customer{\r\n      name\r\n      email\r\n      phone_number\r\n      cus_capacity\r\n    }\r\n    vehicle{\r\n      _id\r\n      name\r\n      capacity\r\n      date_of_manufacture\r\n      model\r\n      vin\r\n    }\r\n    booking_date\r\n    is_active\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": "http://localhost:8005/graphql"
+					},
+					"response": [
+						{
+							"name": "bookings eg",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query{\r\n  bookings{\r\n    _id\r\n    customer{\r\n      name\r\n      email\r\n      phone_number\r\n      cus_capacity\r\n    }\r\n    vehicle{\r\n      _id\r\n      name\r\n      capacity\r\n      date_of_manufacture\r\n      model\r\n      vin\r\n    }\r\n    booking_date\r\n    is_active\r\n  }\r\n}",
+										"variables": ""
+									}
+								},
+								"url": "http://localhost:8005/graphql"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5428"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1534-iGA7g1P1jgaxShWbMy9QC7zAqxk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 Dec 2021 14:33:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"bookings\": [\n            {\n                \"_id\": \"61b32d0e19e4336be66203d0\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 2\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b1f44a668fdf806b23d677\",\n                    \"name\": \"bmw\",\n                    \"capacity\": 2,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"smx\",\n                    \"vin\": \"12345678901234564\"\n                },\n                \"booking_date\": \"2021-12-10T10:33:50.763Z\",\n                \"is_active\": false\n            },\n            {\n                \"_id\": \"61b32d1619e4336be66203d3\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 2\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b1f44a668fdf806b23d677\",\n                    \"name\": \"bmw\",\n                    \"capacity\": 2,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"smx\",\n                    \"vin\": \"12345678901234564\"\n                },\n                \"booking_date\": \"2021-12-10T10:33:58.488Z\",\n                \"is_active\": false\n            },\n            {\n                \"_id\": \"61b32d1c19e4336be66203d6\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 2\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b202de79c2a8e3cd4e554b\",\n                    \"name\": \"bmw\",\n                    \"capacity\": 2,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"smx\",\n                    \"vin\": \"12345678901234565\"\n                },\n                \"booking_date\": \"2021-12-10T10:34:04.042Z\",\n                \"is_active\": false\n            },\n            {\n                \"_id\": \"61b32d2419e4336be66203d9\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 2\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b22383065d0c94b55312e7\",\n                    \"name\": \"bmw\",\n                    \"capacity\": 2,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"smx\",\n                    \"vin\": \"12345678901234566\"\n                },\n                \"booking_date\": \"2021-12-10T10:34:12.296Z\",\n                \"is_active\": false\n            },\n            {\n                \"_id\": \"61b32d3c19e4336be66203dd\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 2\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b22383065d0c94b55312e7\",\n                    \"name\": \"bmw\",\n                    \"capacity\": 2,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"smx\",\n                    \"vin\": \"12345678901234566\"\n                },\n                \"booking_date\": \"2021-02-13T10:34:36.093Z\",\n                \"is_active\": false\n            },\n            {\n                \"_id\": \"61b3674e418d6524cfa82eac\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 2\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b22383065d0c94b55312e7\",\n                    \"name\": \"bmw\",\n                    \"capacity\": 2,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"smx\",\n                    \"vin\": \"12345678901234566\"\n                },\n                \"booking_date\": \"2021-12-09T14:42:22.177Z\",\n                \"is_active\": false\n            },\n            {\n                \"_id\": \"61b881ea83c9bb0c09ac44f4\",\n                \"customer\": {\n                    \"name\": \"Asiyath\",\n                    \"email\": \"Asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 4\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b7514c464ee8f7bcf7c159\",\n                    \"name\": \"muruti\",\n                    \"capacity\": 6,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"dksjfk\",\n                    \"vin\": \"12345678901234569\"\n                },\n                \"booking_date\": \"2021-12-14T11:37:14.465Z\",\n                \"is_active\": false\n            },\n            {\n                \"_id\": \"61c1bb93bb368e0e58bfab95\",\n                \"customer\": {\n                    \"name\": \"Asiyath\",\n                    \"email\": \"Asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 5\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b7514c464ee8f7bcf7c159\",\n                    \"name\": \"muruti\",\n                    \"capacity\": 6,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"dksjfk\",\n                    \"vin\": \"12345678901234569\"\n                },\n                \"booking_date\": \"2021-12-21T11:33:39.589Z\",\n                \"is_active\": false\n            },\n            {\n                \"_id\": \"61c32000a080972d372a58e9\",\n                \"customer\": {\n                    \"name\": \"Asiyath\",\n                    \"email\": \"Asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 5\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b7514c464ee8f7bcf7c159\",\n                    \"name\": \"muruti\",\n                    \"capacity\": 6,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"dksjfk\",\n                    \"vin\": \"12345678901234569\"\n                },\n                \"booking_date\": \"2021-12-22T12:54:24.192Z\",\n                \"is_active\": true\n            },\n            {\n                \"_id\": \"61c32016a080972d372a58ec\",\n                \"customer\": {\n                    \"name\": \"Asiyath\",\n                    \"email\": \"Asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 5\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b7514c464ee8f7bcf7c159\",\n                    \"name\": \"muruti\",\n                    \"capacity\": 6,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"dksjfk\",\n                    \"vin\": \"12345678901234569\"\n                },\n                \"booking_date\": \"2021-12-22T12:54:46.583Z\",\n                \"is_active\": true\n            },\n            {\n                \"_id\": \"61c320bda080972d372a58ef\",\n                \"customer\": {\n                    \"name\": \"Asiyath\",\n                    \"email\": \"Asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 5\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b7514c464ee8f7bcf7c159\",\n                    \"name\": \"muruti\",\n                    \"capacity\": 6,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"dksjfk\",\n                    \"vin\": \"12345678901234569\"\n                },\n                \"booking_date\": \"2021-12-22T12:57:33.857Z\",\n                \"is_active\": true\n            },\n            {\n                \"_id\": \"61c320eda080972d372a58f2\",\n                \"customer\": {\n                    \"name\": \"Asiyath\",\n                    \"email\": \"Asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 5\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b7514c464ee8f7bcf7c159\",\n                    \"name\": \"muruti\",\n                    \"capacity\": 6,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"dksjfk\",\n                    \"vin\": \"12345678901234569\"\n                },\n                \"booking_date\": \"2021-12-22T12:58:21.723Z\",\n                \"is_active\": true\n            },\n            {\n                \"_id\": \"61c334a6a080972d372a58fc\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 5\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b7514c464ee8f7bcf7c159\",\n                    \"name\": \"muruti\",\n                    \"capacity\": 6,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"dksjfk\",\n                    \"vin\": \"12345678901234569\"\n                },\n                \"booking_date\": \"2021-12-22T14:22:30.974Z\",\n                \"is_active\": true\n            },\n            {\n                \"_id\": \"61c334b1a080972d372a58ff\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 5\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b7514c464ee8f7bcf7c159\",\n                    \"name\": \"muruti\",\n                    \"capacity\": 6,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"dksjfk\",\n                    \"vin\": \"12345678901234569\"\n                },\n                \"booking_date\": \"2021-12-22T14:22:41.113Z\",\n                \"is_active\": true\n            },\n            {\n                \"_id\": \"61c3350fa080972d372a5902\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 5\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b7514c464ee8f7bcf7c159\",\n                    \"name\": \"muruti\",\n                    \"capacity\": 6,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"dksjfk\",\n                    \"vin\": \"12345678901234569\"\n                },\n                \"booking_date\": \"2021-12-22T14:24:15.438Z\",\n                \"is_active\": true\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "bookingsByVin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n  bookingsByVin(vin: \"12345678901234564\") {\r\n    _id\r\n    customer {\r\n      name\r\n      email\r\n      phone_number\r\n      cus_capacity\r\n    }\r\n    vehicle {\r\n      _id\r\n      name\r\n      capacity\r\n      date_of_manufacture\r\n      model\r\n      vin\r\n    }\r\n    booking_date\r\n    is_active\r\n  }\r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": "http://localhost:8005/graphql"
+					},
+					"response": [
+						{
+							"name": "bookingsByVin eg",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query {\r\n  bookingsByVin(vin: \"12345678901234564\") {\r\n    _id\r\n    customer {\r\n      name\r\n      email\r\n      phone_number\r\n      cus_capacity\r\n    }\r\n    vehicle {\r\n      _id\r\n      name\r\n      capacity\r\n      date_of_manufacture\r\n      model\r\n      vin\r\n    }\r\n    booking_date\r\n    is_active\r\n  }\r\n}\r\n",
+										"variables": ""
+									}
+								},
+								"url": "http://localhost:8005/graphql"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "744"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e8-vAYE3p8HbX5wo+SOjwf+9kDoWSU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 Dec 2021 14:36:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"bookingsByVin\": [\n            {\n                \"_id\": \"61b32d0e19e4336be66203d0\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 2\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b1f44a668fdf806b23d677\",\n                    \"name\": \"bmw\",\n                    \"capacity\": 2,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"smx\",\n                    \"vin\": \"12345678901234564\"\n                },\n                \"booking_date\": \"2021-12-10T10:33:50.763Z\",\n                \"is_active\": false\n            },\n            {\n                \"_id\": \"61b32d1619e4336be66203d3\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 2\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b1f44a668fdf806b23d677\",\n                    \"name\": \"bmw\",\n                    \"capacity\": 2,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"smx\",\n                    \"vin\": \"12345678901234564\"\n                },\n                \"booking_date\": \"2021-12-10T10:33:58.488Z\",\n                \"is_active\": false\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "bookingsByDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n  bookingsByDate(date: \"2021-12-10\") {\r\n    _id\r\n    customer {\r\n      name\r\n      email\r\n      phone_number\r\n      cus_capacity\r\n    }\r\n    vehicle {\r\n      _id\r\n      name\r\n      capacity\r\n      date_of_manufacture\r\n      model\r\n      vin\r\n    }\r\n    booking_date\r\n    is_active\r\n  }\r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": "http://localhost:8005/graphql"
+					},
+					"response": [
+						{
+							"name": "bookingsByDate eg",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query {\r\n  bookingsByDate(date: \"2021-12-10\") {\r\n    _id\r\n    customer {\r\n      name\r\n      email\r\n      phone_number\r\n      cus_capacity\r\n    }\r\n    vehicle {\r\n      _id\r\n      name\r\n      capacity\r\n      date_of_manufacture\r\n      model\r\n      vin\r\n    }\r\n    booking_date\r\n    is_active\r\n  }\r\n}\r\n",
+										"variables": ""
+									}
+								},
+								"url": "http://localhost:8005/graphql"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1461"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b5-N6/xhv2uT1P6vz0AY5fC5VPzqh0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 Dec 2021 14:37:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"bookingsByDate\": [\n            {\n                \"_id\": \"61b32d0e19e4336be66203d0\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 2\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b1f44a668fdf806b23d677\",\n                    \"name\": \"bmw\",\n                    \"capacity\": 2,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"smx\",\n                    \"vin\": \"12345678901234564\"\n                },\n                \"booking_date\": \"2021-12-10T10:33:50.763Z\",\n                \"is_active\": false\n            },\n            {\n                \"_id\": \"61b32d1619e4336be66203d3\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 2\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b1f44a668fdf806b23d677\",\n                    \"name\": \"bmw\",\n                    \"capacity\": 2,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"smx\",\n                    \"vin\": \"12345678901234564\"\n                },\n                \"booking_date\": \"2021-12-10T10:33:58.488Z\",\n                \"is_active\": false\n            },\n            {\n                \"_id\": \"61b32d1c19e4336be66203d6\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 2\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b202de79c2a8e3cd4e554b\",\n                    \"name\": \"bmw\",\n                    \"capacity\": 2,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"smx\",\n                    \"vin\": \"12345678901234565\"\n                },\n                \"booking_date\": \"2021-12-10T10:34:04.042Z\",\n                \"is_active\": false\n            },\n            {\n                \"_id\": \"61b32d2419e4336be66203d9\",\n                \"customer\": {\n                    \"name\": \"Asiyath Rajila\",\n                    \"email\": \"asiyath@gmail.com\",\n                    \"phone_number\": 1234567890,\n                    \"cus_capacity\": 2\n                },\n                \"vehicle\": {\n                    \"_id\": \"61b22383065d0c94b55312e7\",\n                    \"name\": \"bmw\",\n                    \"capacity\": 2,\n                    \"date_of_manufacture\": \"2015-08-22T00:00:00.000Z\",\n                    \"model\": \"smx\",\n                    \"vin\": \"12345678901234566\"\n                },\n                \"booking_date\": \"2021-12-10T10:34:12.296Z\",\n                \"is_active\": false\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

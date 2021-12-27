@@ -1,0 +1,11 @@
+{
+    "bookingInput": {
+        "customer": {
+            "name": "Asiyath",
+            "email": "Asiyath@gmail.com",
+            "phone_number": 1234567890,
+            "cus_capacity": 4
+        },
+        "vin": "12345678901234569"
+    }
+}
